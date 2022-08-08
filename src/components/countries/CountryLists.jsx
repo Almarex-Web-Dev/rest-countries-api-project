@@ -17,7 +17,7 @@ const CountryLists = () => {
     }
   }
 
-  const listCountries = countryList.slice(0, 8).map((country, index) => {
+  const listCountries = countryList.slice(0, 16).map((country, index) => {
     return (
       <Link to={`/country/${country.name.common}`}>
         <article className="card" key={index}>
