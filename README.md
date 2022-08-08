@@ -39,8 +39,8 @@ Here is the screenshort of the solution that i provided below, it is almost the 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/flexbox-css-grid-responsiveness-css-layouts-L0hJ-Waycf)
+- Live Site URL: [Add live site URL here](https://rest-countries-web-app-project.netlify.app/)
 
 ## My process
 
