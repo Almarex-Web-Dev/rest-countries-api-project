@@ -12,23 +12,23 @@ const regions = [
     name: 'Asia',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Oceania',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Antartic',
   },
   {
-    id: 1,
+    id: 4,
     name: 'Africa',
   },
   {
-    id: 1,
+    id: 5,
     name: 'Americas',
   },
   {
-    id: 1,
+    id: 6,
     name: 'Europe',
   },
 ]
@@ -90,10 +90,15 @@ const Inputs = ({ setCountry }) => {
         className="select__option"
         value={regionValue}
         onChange={checkValue}
+        name="Fileter by Country"
       >
         <option value="1">filter by region</option>
         {MapRegiones.map((region, index) => {
-          return <option key={index}>{region}</option>
+          return (
+            <option value={region} key={index}>
+              {region}
+            </option>
+          )
         })}
       </select>
     </div>
