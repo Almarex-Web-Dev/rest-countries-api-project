@@ -19,8 +19,8 @@ const CountryLists = () => {
 
   const listCountries = countryList.slice(0, 16).map((country, index) => {
     return (
-      <Link to={`/country/${country.name.common.trim()}`}>
-        <article className="card" key={index}>
+      <Link key={index} to={`/country/${country.name.common}`}>
+        <article className="card">
           <img src={country.flags.png} alt="flags" />
           <div className="card__content">
             <h1>{country.name.common}</h1>
