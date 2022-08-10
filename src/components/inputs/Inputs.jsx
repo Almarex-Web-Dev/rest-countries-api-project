@@ -86,6 +86,7 @@ const Inputs = ({ setCountry }) => {
       </form>
 
       <select
+        aria-label="State"
         className="select__option"
         value={regionValue}
         onChange={checkValue}
