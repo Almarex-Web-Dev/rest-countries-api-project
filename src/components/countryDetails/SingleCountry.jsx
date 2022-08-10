@@ -12,20 +12,19 @@ const SingleCountry = () => {
   const { name } = useParams()
   const [singleItem, setSingleItem] = useState([])
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const getCountryName = async () => {
-    try {
-      const response = await axios.get(`${CountryName}/${name}`)
-      const singleData = await response.data
-      //   console.log(singleData)
-      setSingleItem(singleData)
-    } catch (error) {
-      console.log(error)
-    }
-  }
   useEffect(() => {
+    const getCountryName = async () => {
+      try {
+        const response = await axios.get(`${CountryName}/${name}`)
+        const singleData = await response.data
+        //   console.log(singleData)
+        setSingleItem(singleData)
+      } catch (error) {
+        console.log(error)
+      }
+    }
     getCountryName()
-  }, [getCountryName])
+  }, [name])
 
   const singleCountry = singleItem.map((country, i) => {
     return (
@@ -65,13 +64,15 @@ const SingleCountry = () => {
             </div>
           </div>
           <div className="border__countries">
-            <h4>
+            <h2>
               <b>Border Countries: </b>
-            </h4>
+            </h2>
             <div>
-              {country.borders.map((item) => {
-                return <span>{item}</span>
-              })}
+              {country.borders
+                .slice(0, country.borders.length >= 0 && 3)
+                .map((item) => {
+                  return <span>{item}</span>
+                })}
             </div>
           </div>
         </div>

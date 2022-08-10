@@ -81,7 +81,6 @@ const Inputs = ({ setCountry }) => {
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={() => getCountryName(searchTerm)}
           placeholder="search for a country..."
-          name="inputElement"
           id="inputElement"
         />
       </form>
@@ -90,7 +89,7 @@ const Inputs = ({ setCountry }) => {
         className="select__option"
         value={regionValue}
         onChange={checkValue}
-        name="Fileter by Country"
+        name="countries"
       >
         <option value="1">filter by region</option>
         {MapRegiones.map((region, index) => {

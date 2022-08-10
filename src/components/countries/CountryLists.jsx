@@ -23,7 +23,7 @@ const CountryLists = () => {
         <article className="card" key={index}>
           <img src={country.flags.png} alt="flags" />
           <div className="card__content">
-            <h3>{country.name.common}</h3>
+            <h1>{country.name.common}</h1>
             <p>
               <b>Population: </b> {country.population}
             </p>
