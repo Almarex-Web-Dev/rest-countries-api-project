@@ -4,7 +4,7 @@ const Header = ({ modeClick, colorTheme }) => {
   return (
     <>
       <header className="restcountries__header">
-        <nav role="navigation">
+        <nav>
           <h1>Where in the world ?</h1>
           <div className="theme-switch">
             <input type="checkbox" id="switch" />

@@ -85,22 +85,23 @@ const Inputs = ({ setCountry }) => {
         />
       </form>
 
-      <select
-        aria-label="State"
-        className="select__option"
-        value={regionValue}
-        onChange={checkValue}
-        name="countries"
-      >
-        <option value="1">filter by region</option>
-        {MapRegiones.map((region, index) => {
-          return (
-            <option value={region} key={index}>
-              {region}
-            </option>
-          )
-        })}
-      </select>
+      <div>
+        <select
+          aria-label="State"
+          className="select__option"
+          value={regionValue}
+          onChange={checkValue}
+        >
+          <option value="1">filter by region</option>
+          {MapRegiones.map((region, index) => {
+            return (
+              <option value={region} key={index}>
+                {region}
+              </option>
+            )
+          })}
+        </select>
+      </div>
     </div>
   )
 }
