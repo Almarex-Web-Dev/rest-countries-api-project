@@ -3,7 +3,7 @@ import React from 'react'
 const Header = ({ modeClick, colorTheme }) => {
   return (
     <>
-      <header className="restcountries__header">
+      <div className="restcountries__header">
         <nav>
           <h1>Where in the world ?</h1>
           <div className="theme-switch">
@@ -25,7 +25,7 @@ const Header = ({ modeClick, colorTheme }) => {
             </label>
           </div>
         </nav>
-      </header>
+      </div>
     </>
   )
 }

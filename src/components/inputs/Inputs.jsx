@@ -71,7 +71,7 @@ const Inputs = ({ setCountry }) => {
   }
   return (
     <div className="input__wrapper">
-      <form className="form" onSubmit={preventDefault}>
+      <form aria-labelledby='`' className="form" onSubmit={preventDefault}>
         <label htmlFor="inputElement">
           <GoSearch className="icon" />
         </label>
