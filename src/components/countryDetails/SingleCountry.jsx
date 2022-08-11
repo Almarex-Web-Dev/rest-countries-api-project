@@ -13,6 +13,7 @@ const SingleCountry = () => {
   const [singleItem, setSingleItem] = useState([])
 
   useEffect(() => {
+    console.log('useEfectttt!!!')
     const getCountryName = async () => {
       try {
         const response = await axios.get(`${CountryName}/${name}`)
@@ -69,7 +70,7 @@ const SingleCountry = () => {
             </h2>
             <div>
               {country.borders
-                .slice(0, country.borders.length >= 0 && 3)
+                ?.slice(0, country.borders.length < 0 && 3)
                 .map((item) => {
                   return <span>{item}</span>
                 })}
